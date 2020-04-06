@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-9">
+		<% if !@tracked_stocks.empty? %>
+			<table class="table table-bordered table-hover">
+			  <thead>
+			    <tr>
+			      <th scope="col">Company</th>
+			      <th scope="col">Ticker</th>
+			      <th scope="col">Price</th>
+			      <th scope="col">Actions</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<% @tracked_stocks.each do |stock| %>
+			    <tr>
+			      <th scope="row"><%= stock.name %></th>
+			      <td><%= stock.ticker %></td>
+			      <td><%= stock.last_price %></td>
+			      <td><%= 'Action placeholder' %></td>
+			    </tr>
+			   	<% end %>
+			  </tbody>
+			</table>
+		<% else %>
+			<h2 align="center">You are not tracking any stocks yet</h2>
+			<h1 align="center" class="display-2">:o </h1>
+			<h2 align="center">Search some to start tracking them</h2>
+		<% end %>
+	</div>
+</div>
