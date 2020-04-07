@@ -10,7 +10,7 @@
 				<%= text_field_tag :friend, params[:friend], placeholder: "Enter friend name or email", autofocus: true, class: "form-control"%>
 			</div>
 			<div class="col-sm-3 no-left-padding">
-				<%= button_tag type: :submit, class: "btn btn-primary" do%>
+				<%= button_tag type: :submit, id: "search-friends-button", class: "btn btn-primary" do%>
 					<%= fa_icon 'search' %>
 				<% end %>
 

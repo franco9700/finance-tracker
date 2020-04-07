@@ -17,3 +17,24 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import "bootstrap"
+
+$(document).on('turbolinks:load', function() {
+	$("#search-stocks-button").click(function() {
+	  // add spinner to button
+	  $("#results").html(
+	    `<div class="offset-4">
+	    	<span class="spinner-border text-secondary m-5" role="status" aria-hidden="true">
+	    	</span>
+	    </div>`
+
+	  );
+	});
+
+	$("#search-friends-button").click(function() {
+	  // add spinner to button
+	  $("#friends-results").html(
+	    `<div class="offset-4"><span class="spinner-border text-secondary m-5" role="status" aria-hidden="true"></span></div>`
+
+	  );
+	});
+})
