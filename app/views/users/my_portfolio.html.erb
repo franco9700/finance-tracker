@@ -23,4 +23,10 @@
 
 </div>
 
-<%= render 'stocks/list' %>
+<% if @tracked_stocks.any? %>
+	<%= render 'stocks/list' %>
+<% else %>
+	<h2 align="center">You are not tracking any stocks yet</h2>
+	<h1 align="center" class="display-2">:o </h1>
+	<h2 align="center">Search some to start tracking them</h2>
+<% end %>
