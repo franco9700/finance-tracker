@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-9">
+		<% if !@friends.empty? %>
+			<table class="table table-bordered table-hover">
+			  <thead>
+			    <tr>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Actions</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<% @friends.each do |friend| %>
+			    <tr>
+			      <th scope="row"><%= friend.first_name %></th>
+			      <td><%= friend.last_name%></td>
+			      <td><%= friend.email %></td>
+			      <td><%= link_to 'Remove', "#", method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm" %></td>
+			    </tr>
+			   	<% end %>
+			  </tbody>
+			</table>
+		<% else %>
+			<h2 align="center">You do not have any friends yet</h2>
+			<h1 align="center" class="display-2">:o </h1>
+			<h2 align="center">Search some to start adding them</h2>
+		<% end %>
+	</div>
+</div>

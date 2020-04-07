@@ -1,0 +1,22 @@
+<h1><strong>My Friends</strong></h1>
+
+<p>Search a friend!</p>
+
+<div class="search-area">
+	<h3>Search friends</h3>
+	<%= form_tag "#", remote: true, method: :get do%>
+		<div class="form-group row">
+			<div class="col-sm-9 no-right-padding">
+				<%= text_field_tag :friend, params[:stock], placeholder: "Enter friend name or email", autofocus: true, class: "form-control"%>
+			</div>
+			<div class="col-sm-3 no-left-padding">
+				<%= button_tag type: :submit, class: "btn btn-primary" do%>
+					<%= fa_icon 'search' %>
+				<% end %>
+
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<%= render 'friends/list' %>
