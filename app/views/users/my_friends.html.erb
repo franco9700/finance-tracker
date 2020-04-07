@@ -4,10 +4,10 @@
 
 <div class="search-area">
 	<h3>Search friends</h3>
-	<%= form_tag "#", remote: true, method: :get do%>
+	<%= form_tag search_friend_path, remote: true, method: :get do%>
 		<div class="form-group row">
 			<div class="col-sm-9 no-right-padding">
-				<%= text_field_tag :friend, params[:stock], placeholder: "Enter friend name or email", autofocus: true, class: "form-control"%>
+				<%= text_field_tag :friend, params[:friend], placeholder: "Enter friend name or email", autofocus: true, class: "form-control"%>
 			</div>
 			<div class="col-sm-3 no-left-padding">
 				<%= button_tag type: :submit, class: "btn btn-primary" do%>
@@ -17,6 +17,10 @@
 			</div>
 		</div>
 	<% end %>
+</div>
+
+<div id="friend-results">
+
 </div>
 
 <%= render 'friends/list' %>
