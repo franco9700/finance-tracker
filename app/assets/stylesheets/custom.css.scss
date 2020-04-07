@@ -22,3 +22,16 @@
 	padding-right: 5px;
 }
 
+.jumbotron {
+	background-image: asset-url('banner2.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 550px;
+}
+
+.jumbotron h1{
+	text-align: left;
+	margin-botton: 30px;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
